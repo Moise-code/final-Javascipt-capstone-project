@@ -37,3 +37,14 @@
   color: #fff;
   text-decoration: none;
 }
+
+.footer-content {
+    display: flex;
+    padding: 30px 60px;
+    align-items: center;
+  }
+  
+  .footer-top {
+    border: 1px solid black;
+    margin-top: 4rem;
+  }
