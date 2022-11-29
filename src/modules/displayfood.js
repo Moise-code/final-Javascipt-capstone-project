@@ -25,7 +25,7 @@ export const display = async () => {
               <div class="meal_image">
                 <img class="meal_image" src="${item.strMealThumb}" alt="asdf">
               </div>
-              <div class="flex-items actions_name">
+              <div class="flex actions_name">
                 <p class="meal">${item.strMeal}</p>
                 <div>
                   <i class="fa-solid fa-heart"></i>
@@ -36,6 +36,7 @@ export const display = async () => {
               </div>
               <div class="column flex">
                 <button class="button">Comments</button>
+                <button class="button">Reservations</button>
             </section>`;
 
         // renderLikes(item.idMeal);
