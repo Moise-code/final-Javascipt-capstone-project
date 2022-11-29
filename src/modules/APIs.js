@@ -1,11 +1,12 @@
 import { nutrients } from './food.js';
 
-const foodApi = 'https://themealdb.com/api/json/v1/1/search.php?s';
+const mealApi = 'www.themealdb.com/api/json/v1/1/search.php?s';
 
-const foodApiObj = [];
+const mealApiObj = [];
 
-nutrients.forEach((food) => {
-  foodApiObj.push(`${foodApi}=${food}`);
+nutrients.forEach((meal) => {
+  mealApiObj.push(`${mealApi}=${meal}`);
 });
 
-export {foodApiObj };
+export default { mealApiObj };
+

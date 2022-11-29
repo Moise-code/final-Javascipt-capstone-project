@@ -105,12 +105,11 @@ footer {
 }
 
 .footer-content {
-  display: flex;
   padding: 30px 60px;
-  align-items: center;
+  text-align: center;
 }
 
 .footer-top {
-  border: 1px solid red;
+  border: 1px solid lightgrey;
   margin-top: 3rem;
 }
