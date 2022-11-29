@@ -1,4 +1,4 @@
-import { meals } from './meal.js';
+import { nutrients } from './food.js';
 
 const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 const commentkey = 'jUTHHFhjhjmbJGYTMBJgyj';
@@ -12,7 +12,7 @@ const mealApi = 'www.themealdb.com/api/json/v1/1/search.php?s';
 
 const mealApiObj = [];
 
-meals.forEach((meal) => {
+nutrients.forEach((meal) => {
   mealApiObj.push(`${mealApi}=${meal}`);
 });
 
