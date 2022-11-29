@@ -3,7 +3,8 @@
   box-sizing: border-box;
   padding: 0;
 }
-body{
+
+body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,16 +43,18 @@ body{
   color: #fff;
   text-decoration: none;
 }
-footer{
+
+footer {
   margin-top: auto;
 }
+
 .footer-content {
-    display: flex;
-    padding: 30px 60px;
-    align-items: center;
-  }
-  
-  .footer-top {
-    border: 1px solid red;
-    margin-top: 3rem;
-  }
+  display: flex;
+  padding: 30px 60px;
+  align-items: center;
+}
+
+.footer-top {
+  border: 1px solid red;
+  margin-top: 3rem;
+}
