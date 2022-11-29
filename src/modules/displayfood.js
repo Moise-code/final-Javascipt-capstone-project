@@ -1,4 +1,4 @@
-import { foodApiObj } from './APIs.js';
+import mealApiObj from './APIs.js';
 
 const main = document.querySelector('main');
 
@@ -7,7 +7,7 @@ export const display = async () => {
 /* eslint-enable */
   // let markup = '';
 
-  foodApiObj.forEach(async (item) => {
+  mealApiObj.forEach(async (item) => {
     try {
       const response = await fetch(item);
       const data = await response.json();
