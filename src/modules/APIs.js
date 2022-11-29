@@ -1,4 +1,4 @@
-import { nutrients } from './food.js';
+import nutrients from './food.js';
 
 const mealApi = 'www.themealdb.com/api/json/v1/1/search.php?s';
 

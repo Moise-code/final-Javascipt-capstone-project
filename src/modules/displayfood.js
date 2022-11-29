@@ -1,4 +1,4 @@
-import { foodApiObj } from './APIs.js';
+import foodApiObj from './APIs.js';
 
 const main = document.querySelector('main');
 
