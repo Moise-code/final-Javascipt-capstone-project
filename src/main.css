@@ -75,7 +75,8 @@ main {
 .flex {
   display: flex;
 }
-.flex-items{
+
+.flex-items {
   display: flex;
   flex-direction: column;
 }

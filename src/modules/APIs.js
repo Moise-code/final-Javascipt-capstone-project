@@ -14,4 +14,3 @@ nutrients.forEach((meal) => {
 });
 
 export default { mealApiObj, commentLink, likeLink };
-
