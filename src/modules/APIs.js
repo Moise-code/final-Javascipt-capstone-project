@@ -1,19 +1,19 @@
-import { meals } from './meal.js';
+import { nutrients } from './food.js';
 
 const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 const commentkey = 'jUTHHFhjhjmbJGYTMBJgyj';
 const commentUrl = `${commentApi}/apps/:${commentkey}/comments/`;
 
-const likeapi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
-const likekey = 'ahggGFtfjsuJHUTHhfyFHJ';
-const likeurl = `${likeapi}/apps/:${likekey}/likes/`;
+const likeApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
+const likeKey = 'ahggGFtfjsuJHUTHhfyFHJ';
+const likeUrl = `${likeApi}/apps/:${likeKey}/likes/`;
 
-const mealApi = 'www.themealdb.com/api/json/v1/1/search.php?s';
+const foodApi = 'https://themealdb.com/api/json/v1/1/search.php?s';
 
-const mealApiObj = [];
+const foodApiObj = [];
 
-meals.forEach((meal) => {
-  mealApiObj.push(`${mealApi}=${meal}`);
+nutrients.forEach((food) => {
+  foodApiObj.push(`${foodApi}=${food}`);
 });
 
-export { commentUrl, likeurl, mealApiObj };
+export { commentUrl, likeUrl, foodApiObj };

@@ -44,6 +44,62 @@ body {
   text-decoration: none;
 }
 
+.column {
+  flex-direction: column;
+}
+
+main {
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.link a {
+  color: rgba(206, 205, 205, 0.753);
+  text-decoration: none;
+}
+
+.food_items {
+  justify-content: center;
+  flex-basis: 30%;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.meal_image {
+  width: 200px;
+}
+
+.flex {
+  display: flex;
+}
+.flex-items{
+  display: flex;
+  flex-direction: column;
+}
+
+.actions_name {
+  gap: 10px;
+}
+
+.meal {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.nation {
+  font-weight: 550;
+  font-size: 18px;
+}
+
+.button {
+  padding: 5px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
 footer {
   margin-top: auto;
 }
