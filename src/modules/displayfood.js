@@ -3,10 +3,9 @@ import mealApiObj from './APIs.js';
 const main = document.querySelector('main');
 const popup = document.querySelector('#showComments');
 
-/* eslint-disable */
 export const display = async () => {
-  /* eslint-enable */
-  // let markup = '';
+  
+const display = async () => {
 
   mealApiObj.forEach(async (item) => {
     try {
@@ -39,6 +38,7 @@ export const display = async () => {
                 <button class="button">Comments</button>
                 <button class="button">Reservations</button>
             </section>`;
+
         const button = document.querySelector('.button');
         button.addEventListener('click', () => {
           const pop = () => {
@@ -77,9 +77,11 @@ export const display = async () => {
           };
           pop();
         });
+
       });
     } catch (err) {
       main.innerHTML = 'err';
     }
   });
 };
+export default display;
