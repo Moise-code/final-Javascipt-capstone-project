@@ -1,12 +1,9 @@
-import mealApiObj from './APIs.js';
+import { mealApiObj, commentLink } from './APIs.js';
 
 const main = document.querySelector('main');
 const popup = document.querySelector('#showComments');
 
 export const display = async () => {
-  
-const display = async () => {
-
   mealApiObj.forEach(async (item) => {
     try {
       const response = await fetch(item);
@@ -35,11 +32,11 @@ const display = async () => {
                 </div>
               </div>
               <div class="column flex">
-                <button class="button">Comments</button>
+                <button class="button" id="btn">Comments</button>
                 <button class="button">Reservations</button>
             </section>`;
 
-        const button = document.querySelector('.button');
+        const button = document.getElementById('btn');
         button.addEventListener('click', () => {
           const pop = () => {
             popup.innerHTML = `
@@ -76,8 +73,76 @@ const display = async () => {
             document.body.style.overflow = 'hidden';
           };
           pop();
-        });
 
+          const commentCount = document.querySelector('.comment_count');
+          const commentShow = document.querySelector('.pop_comment');
+
+          const comment = async (username, comment) => {
+            const comments = [];
+            comments.username = username;
+            comments.comment = comment;
+            comments.item_id = item.idMeal;
+            const response = await fetch(commentLink, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(comments) });
+            const data = response;
+            return data;
+          };
+          const showComments = async (data) => {
+            commentShow.innerHTML = '';
+            const displayScores = data.map((list) => `<div class="new_list">
+
+            <p> ${list.creation_date} </p>
+                                                              
+            <p> ${list.username} </p>
+                                                              
+            <p> ${list.comment} </p>
+                                                            
+            </div>`).join('');
+            commentShow.innerHTML = displayScores;
+          };
+
+          const getss = async (id) => {
+            const response = await fetch(`${commentLink}?item_id=${id}`);
+            const data = await response.json();
+            if (response.ok) {
+              showComments(data);
+              commentCount.innerHTML = `Comments: ${data.length}`;
+            }
+          };
+
+          const name = document.querySelector('#name');
+          const text = document.querySelector('#text');
+          const clearInput = () => {
+            name.value = '';
+            text.value = '';
+          };
+
+          const form = document.querySelector('.form');
+
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const namess = document.querySelector('#name').value;
+            const textss = document.querySelector('#text').value;
+            comment(namess, textss);
+            clearInput();
+            getss(item.idMeal);
+          });
+          form.addEventListener('focusout', () => {
+            getss(item.idMeal);
+          });
+          window.addEventListener('mouseover', () => {
+            getss(item.idMeal);
+          });
+          const close = document.querySelector('.close-popup');
+          close.addEventListener('click', () => {
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          });
+          getss(item.idMeal);
+          const viewMore = document.querySelector('.refresh_comment');
+          viewMore.addEventListener('click', () => {
+            getss(item.idMeal);
+          });
+        });
       });
     } catch (err) {
       main.innerHTML = 'err';
