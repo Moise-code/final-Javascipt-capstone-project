@@ -1,13 +1,9 @@
-import { foodApiObj } from './APIs.js';
+import mealApiObj from './APIs.js';
 
 const main = document.querySelector('main');
 
-/* eslint-disable */
-export const display = async () => {
-/* eslint-enable */
-  // let markup = '';
-
-  foodApiObj.forEach(async (item) => {
+const display = async () => {
+  mealApiObj.forEach(async (item) => {
     try {
       const response = await fetch(item);
       const data = await response.json();
@@ -25,7 +21,7 @@ export const display = async () => {
               <div class="meal_image">
                 <img class="meal_image" src="${item.strMealThumb}" alt="asdf">
               </div>
-              <div class="flex-items actions_name">
+              <div class="flex actions_name">
                 <p class="meal">${item.strMeal}</p>
                 <div>
                   <i class="fa-solid fa-heart"></i>
@@ -36,13 +32,12 @@ export const display = async () => {
               </div>
               <div class="column flex">
                 <button class="button">Comments</button>
+                <button class="button">Reservations</button>
             </section>`;
-
-        // renderLikes(item.idMeal);
-        // return 'done';
       });
     } catch (err) {
       main.innerHTML = 'err';
     }
   });
 };
+export default display;
