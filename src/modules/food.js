@@ -1,2 +1,2 @@
-const nutrients = ['Corba', 'Shawarma', 'Burger', 'Tamiya', 'Eton Mess', 'Yaki Udon', 'Baingan Bharta', 'Ayam Percik', 'Apple & Blackberry Crumble', 'Bread and Butter Pudding'];
+const nutrients = ['Kumpir', 'Dal fry', 'Poutine', 'Timbits', 'Kafteji', 'Koshari', 'Kapsalon', 'Fish pie'];
 export default nutrients;
