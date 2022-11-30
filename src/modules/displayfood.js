@@ -5,8 +5,7 @@ import comment from './postComment.js';
 
 const main = document.querySelector('main');
 const popup = document.querySelector('#showComments');
-
-export const display = async () => {
+const display = async () => {
   mealApiObj.forEach(async (item) => {
     try {
       const response = await fetch(item);
@@ -159,4 +158,5 @@ export const display = async () => {
     }
   });
 };
-export default display;
+
+export default { display };
