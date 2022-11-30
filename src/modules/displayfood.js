@@ -2,11 +2,7 @@ import mealApiObj from './APIs.js';
 
 const main = document.querySelector('main');
 
-/* eslint-disable */
-export const display = async () => {
-/* eslint-enable */
-  // let markup = '';
-
+const display = async () => {
   mealApiObj.forEach(async (item) => {
     try {
       const response = await fetch(item);
@@ -38,12 +34,10 @@ export const display = async () => {
                 <button class="button">Comments</button>
                 <button class="button">Reservations</button>
             </section>`;
-
-        // renderLikes(item.idMeal);
-        // return 'done';
       });
     } catch (err) {
       main.innerHTML = 'err';
     }
   });
 };
+export default display;
