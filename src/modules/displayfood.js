@@ -1,7 +1,9 @@
-import { likeUrl, mealApiObj } from './APIs.js';
+import { likeUrl, mealApiObj, commentLink } from './APIs.js';
 import Likes from './likes.js';
-import getss from './getComment.js';
-import comment from './postComment.js';
+// import getss from './getComment.js';
+// import comment from './postComment.js';
+
+import Comment from './totalComments.js';
 
 const main = document.querySelector('main');
 const popup = document.querySelector('#showComments');
@@ -123,6 +125,40 @@ const display = async () => {
           };
           pop();
 
+          const commentCount = document.querySelector('.comment_count');
+          const commentShow = document.querySelector('.pop_comment');
+
+          const comment = async (username, comment) => {
+            const comments = new Comment(username, comment, item.idMeal);
+            const response = await fetch(commentLink, {
+              method: 'POST',
+              headers: { 'content-type': 'application/json' },
+              body: JSON.stringify(comments),
+            });
+            const data = response;
+            return data;
+          };
+          const showComments = async (data) => {
+            commentShow.innerHTML = '';
+            const displayScores = data.map((list) => `<div class="new_list">
+            <p> ${list.creation_date} </p>
+                                                              
+            <p> ${list.username} </p>
+                                                              
+            <p> ${list.comment} </p>
+                                                            
+            </div>`).join('');
+            commentShow.innerHTML = displayScores;
+          };
+
+          const getss = async (id) => {
+            const response = await fetch(`${commentLink}?item_id=${id}`);
+            const data = await response.json();
+            if (response.ok) {
+              showComments(data);
+              commentCount.innerHTML = `Comments: ${data.length}`;
+            }
+          };
           const name = document.querySelector('#name');
           const text = document.querySelector('#text');
           const clearInput = () => {
@@ -136,7 +172,7 @@ const display = async () => {
             e.preventDefault();
             const namess = document.querySelector('#name').value;
             const textss = document.querySelector('#text').value;
-            comment(namess, textss, item.idMeal);
+            comment(namess, textss);
             clearInput();
             getss(item.idMeal);
           });
@@ -159,4 +195,4 @@ const display = async () => {
   });
 };
 
-export default { display };
+export default display;
