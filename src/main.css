@@ -93,11 +93,12 @@ main {
 
 .meal_image-cover {
   width: 100%;
-  position: relative;
+  position: inherit;
   transition: ease-in-out 1s;
 }
 
 .middle {
+  display: none;
   transition: 1s ease-in-out;
   opacity: 0;
   position: absolute;
@@ -149,8 +150,6 @@ main {
   animation: textclip 6s linear infinite;
   display: inline-block;
   font-weight: bold;
-
-  /* padding: 16px 32px; */
 }
 
 .flex {
@@ -166,6 +165,22 @@ main {
   gap: 5px;
   align-items: center;
   margin-top: 10px;
+}
+
+.showComments {
+  margin-top: 5%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  backface-visibility: hidden;
+  width: 90vw;
+  min-height: 565px;
+  border: 2px solid rgb(223, 17, 113);
+  animation: 1s drop;
+  display: none;
+  padding: 0 8px;
 }
 
 .meal {
@@ -223,8 +238,6 @@ main {
 .about-team {
   font-family: 'Rubik Glitch', cursive;
   text-align: center;
-
-  /* margin-left: 2rem; */
   font-size: 3rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -321,6 +334,96 @@ footer {
   margin-top: 3rem;
 }
 
+.close-popup {
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  margin-right: 4px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 40px;
+  font-weight: 600;
+  top: 0;
+  right: 0;
+  margin-top: 2%;
+}
+
+.add-comment {
+  display: flex;
+  justify-content: center;
+}
+
+.input_Comment {
+  margin: 0 300px;
+}
+
+#name {
+  width: 200px;
+  color: #67798e;
+  margin-bottom: 16px;
+  padding: 5px;
+}
+
+#text {
+  width: 200px;
+  color: #67798e;
+  margin-bottom: 16px;
+}
+
+.submit-btn {
+  padding: 5px 18px;
+  font-size: 15px;
+  margin-top: 10px;
+  color: red;
+}
+
+.pop {
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  top: 22px;
+  padding: 20px;
+}
+
+.container {
+  position: fixed;
+  top: 10px;
+  max-height: 100vh;
+  overflow: auto;
+  width: 100%;
+}
+
+.image_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.popImage {
+  width: 200px;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.instructions {
+  height: 300px;
+  margin-top: 20px;
+  width: 300px;
+  overflow: auto;
+  background: #eeb3b3;
+  font-size: 14px;
+}
+
+.instructions::-webkit-scrollbar {
+  display: none;
+}
+
+.popMeal {
+  font-size: 20px;
+}
+
 .modal {
   position: fixed;
   top: 50%;
@@ -360,36 +463,6 @@ footer {
   margin: 0 300px;
 }
 
-#name {
-  width: 200px;
-  color: #67798e;
-  margin-bottom: 16px;
-  padding: 5px;
-}
-
-#text {
-  width: 200px;
-  color: #67798e;
-  margin-bottom: 16px;
-}
-
-.submit-btn {
-  padding: 5px 18px;
-  font-size: 15px;
-  margin-top: 10px;
-  color: red;
-}
-
-/* pop */
-.pop {
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-  position: relative;
-  top: 22px;
-  padding: 20px;
-}
-
 .popIt {
   position: fixed;
   top: 10px;
@@ -407,19 +480,6 @@ footer {
 .pop_image {
   width: 200px;
   margin: auto;
-}
-
-.instructions {
-  height: 300px;
-  margin-top: 20px;
-  width: 300px;
-  overflow: auto;
-  background: #eeb3b3;
-  font-size: 14px;
-}
-
-.instructions::-webkit-scrollbar {
-  display: none;
 }
 
 .pop_meal {
