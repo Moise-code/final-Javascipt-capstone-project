@@ -9,4 +9,4 @@ nutrients.forEach((food) => {
   mealApiObj.push(`${foodApi}=${food}`);
 });
 
-export { likeUrl, mealApiObj };
+export {likeUrl, mealApiObj};
