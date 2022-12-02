@@ -17,4 +17,4 @@ describe('Count comments of a meal item', () => {
     }];
     expect(countComments(comments)).toBe(2);
   });
-})
+});
