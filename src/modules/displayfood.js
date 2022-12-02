@@ -1,6 +1,8 @@
 import { mealApiObj, commentLink, likeUrl } from './APIs.js';
 import Likes from './likes.js';
 
+import Comment from './comment.js';
+
 const main = document.querySelector('.main');
 
 const popup = document.querySelector('#modalDisplay');
@@ -159,15 +161,11 @@ const display = async () => {
             const namess = document.querySelector('#name').value;
             const textss = document.querySelector('#text').value;
             comment(namess, textss);
+            getss(item.idMeal);
             clearInput();
             getss(item.idMeal);
           });
-          form.addEventListener('focusout', () => {
-            getss(item.idMeal);
-          });
-          window.addEventListener('mouseover', () => {
-            getss(item.idMeal);
-          });
+
           const close = document.querySelector('.close-button');
           close.addEventListener('click', () => {
             popup.style.display = 'none';
