@@ -344,8 +344,6 @@ footer {
   position: absolute;
   cursor: pointer;
   outline: none;
-  margin-right: 4px;
-  /* background-color: #fff; */
   color: #67798e;
   border: none;
   font-size: 80px;
@@ -391,7 +389,7 @@ footer {
   align-items: center;
   background: #fff;
   position: relative;
-  top: 0px;
+  top: 0;
   padding: 40px;
   margin: 2rem;
   border-radius: 10px;
