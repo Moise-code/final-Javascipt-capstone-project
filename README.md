@@ -13,7 +13,6 @@
 
 ### Live demo
 
-[JScap-project](https://cluab.github.io/JScap-project/dist/#)
 
 ## Authors
 
@@ -25,7 +24,6 @@
 👤 **Moise Byiringiro**
 
 - GitHub: [@Moise ](https://github.com/Moise-code)
-- Twitter: [@Moise ](https://twitter.com/cluab122)
 - LinkedIn: [@Moise ](https://www.linkedin.com/in/moise-byiringiro-8a8ba4142/)
 
 
