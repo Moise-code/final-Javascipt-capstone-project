@@ -27,12 +27,15 @@ const display = async () => {
         const likeCounts = document.createElement('p');
 
         section.innerHTML = `
-              <div class="">
+                 <div class="">
                 <span class="" id=${item.idMeal}>
                 </span>
               </div>
-              <div class="meal_image">
+              <div class="meal_image-cover">
                 <img class="meal_image" src="${item.strMealThumb}" alt="asdf">
+                <div class = "middle">
+                <div class = "text"> This is the amazing meal you have ever tasted</div>
+                </div>
               </div>
             `;
         twoDiv.innerHTML = `

@@ -345,13 +345,14 @@ footer {
   cursor: pointer;
   outline: none;
   margin-right: 4px;
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #67798e;
   border: none;
-  font-size: 30px;
+  font-size: 80px;
   font-weight: 600;
-  top: 0;
-  right: 0;
+  top: -5%;
+  right: 0%;
+  margin-right: 20px;
   margin-top: 2%;
 }
 
@@ -390,16 +391,20 @@ footer {
   align-items: center;
   background: #fff;
   position: relative;
-  top: 22px;
-  padding: 20px;
+  top: 0px;
+  padding: 40px;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: #eeb3b3 1px 1px 10px 14px;
 }
 
 .popIt {
   position: fixed;
-  top: 10px;
+  top: 5px;
   max-height: 100vh;
   overflow: auto;
   width: 100%;
+  z-index: 200;
 }
 
 .popup_image {
