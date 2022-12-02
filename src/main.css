@@ -335,6 +335,7 @@ footer {
   animation: 1s drop;
   display: none;
   padding: 0 8px;
+  height: 100vh;
 }
 
 .close-button {
@@ -349,6 +350,7 @@ footer {
   font-weight: 600;
   top: 0;
   right: 0;
+  margin-top: 2%;
 }
 
 .add-comm {
@@ -407,12 +409,12 @@ footer {
 .pop_image {
   width: 200px;
   margin: auto;
+  margin-top: 5%;
 }
 
 .instructions {
-  height: 300px;
   margin-top: 20px;
-  width: 300px;
+  width: 900px;
   overflow: auto;
   background: #eeb3b3;
   font-size: 14px;
