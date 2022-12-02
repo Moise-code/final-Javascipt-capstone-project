@@ -53,6 +53,7 @@ body {
   color: #fff;
   text-decoration: none;
   transition: ease-in-out 0.5s;
+  cursor: pointer;
 }
 
 .people a {
