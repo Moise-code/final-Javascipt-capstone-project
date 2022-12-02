@@ -7,13 +7,13 @@ describe('Count comments of a meal item', () => {
   });
   test('Expect to get 2 comments back', () => {
     const comments = [{
-      creation_date: '2022-10-26',
-      username: 'kenny',
-      comment: 'lovely meal',
+      creation_date: '2022-12-01',
+      username: 'lit',
+      comment: 'nice',
     }, {
-      creation_date: '2022-10-26',
-      comment: 'delecious meal',
-      username: 'kenny',
+      creation_date: '2022-12-02',
+      comment: 'lizo',
+      username: 'sweet',
     }];
     expect(countComments(comments)).toBe(2);
   });
