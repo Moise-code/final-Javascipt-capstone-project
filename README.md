@@ -18,7 +18,7 @@
 
 👤 **Precious Nhlapho**
 
-- GitHub: [@cluab](https://github.com/Ambient567)
+- GitHub: [@precious](https://github.com/Ambient567)
 - LinkedIn: [monicampowell](https://www.linkedin.com/in/monicampowell/)
 
 👤 **Moise Byiringiro**
